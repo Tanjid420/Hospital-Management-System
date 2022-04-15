@@ -1,5 +1,11 @@
 hello bro
 I am here to take you out
 hello babe
+<<<<<<< HEAD
 In the end it doesnot even matter
 s
+=======
+z
+hello  dear bro
+It's the addition
+>>>>>>> d3c87be5ab473a46fd24592cafc48f9def7d85bf
