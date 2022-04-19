@@ -48,6 +48,6 @@ app.get('/createdb',(req,res)=>{
         res.send("reateed") 
     })
 })
-app.listen(4000,()=>{
+app.listen(6000,()=>{
     console.log("server is running ")
 })
