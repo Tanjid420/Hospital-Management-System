@@ -1,0 +1,20 @@
+.btn-slider{
+    position:absolute;
+    height: 60px;
+    width: 60px;
+    /* background-color:brown; */
+    /* margin: 160px 0px 0px 10px; */
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 5px solid rgba(34, 34, 34, 0.287);
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-slider img{
+    width: 25px;
+    height: auto;
+    pointer-events: none;
+    /* transition: opacity ease-in-out 0.4s; */
+}
