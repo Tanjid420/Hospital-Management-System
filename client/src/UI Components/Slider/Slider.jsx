@@ -31,14 +31,26 @@ const Slider=(props)=>{
         imgIndex=imgIndex%5;
         setimgIndex(imgIndex);
     }
+    const autoScroll=true;
+    let slideInterval;
+    let intervalTime=5000;
+    function auto() {
+        slideInterval = setInterval(rightClickHandler, intervalTime);
+      }
+    useEffect(()=>{
+        if(autoScroll)
+        {
+            auto();
+        }
+        return()=>clearInterval(slideInterval);
+    },[imgIndex])
     return(
         <Aux>
          <div className="sliderFrame">
-              
-             <TrackingImage position={imgIndex}/>
+               <InnerImageShow index={imgIndex}/>
             <ButtonSlider position={"left"} direction={leftClickHandler}/> 
             <ButtonSlider position={"right"} direction={rightClickHandler}/> 
-         <InnerImageShow index={imgIndex}/>
+        <TrackingImage position={imgIndex}/>
         
          </div>
         </Aux>
