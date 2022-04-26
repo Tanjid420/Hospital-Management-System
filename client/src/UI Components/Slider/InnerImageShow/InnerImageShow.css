@@ -1,0 +1,12 @@
+.imageShow{
+    display: flex;
+    height: 400px;
+    width: 1220px;
+    background-color: aqua;
+}
+.imageShow img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+   
+}
