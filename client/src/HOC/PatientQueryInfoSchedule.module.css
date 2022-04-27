@@ -1,0 +1,9 @@
+.threecards{
+   display: flex;
+        justify-content: space-between;
+        padding-top: 3rem;
+}
+.MuicardContent{
+    background-color: aqua;
+   
+}
