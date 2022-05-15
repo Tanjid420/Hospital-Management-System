@@ -4,14 +4,14 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import react from "react";
 import reactDOM from "react-dom";
-import styles from "./ModalForm.module.css";
+import styles from "./ModalAppointmentForm.module.css";
 
-const Backdrop = ({ setOpenModal }) => {
+const Backdrop = ({ setOpenModalAppointment }) => {
   return (
-    <div className={styles.backdrop} onClick={() => setOpenModal(false)}></div>
+    <div className={styles.backdrop} onClick={() => setOpenModalAppointment(false)}></div>
   );
 };
-const Overlay = ({ setOpenModal }) => {
+const Overlay = ({ setOpenModalAppointment }) => {
   return (
     <div className={styles.container}>
       <Card className={styles.card}>
@@ -39,7 +39,7 @@ const Overlay = ({ setOpenModal }) => {
         <CardActions>
           <Button
             className={styles.button1}
-            onClick={() => setOpenModal(false)}
+            onClick={() => setOpenModalAppointment(false)}
           >
             Submit
           </Button>
@@ -51,16 +51,16 @@ const Overlay = ({ setOpenModal }) => {
 
 const portalElement = document.querySelector("#overlay");
 
-const ModalForm = ({ setOpenModal }) => {
+const ModalAppointmentForm = ({ setOpenModalAppointment }) => {
   return (
     <react.Fragment>
-      <Overlay setOpenModal={setOpenModal} />
+      <Overlay setOpenModalAppointment={setOpenModalAppointment} />
 
       {reactDOM.createPortal(
-        <Backdrop setOpenModal={setOpenModal} />,
+        <Backdrop setOpenModalAppointment={setOpenModalAppointment} />,
         portalElement
       )}
     </react.Fragment>
   );
 };
-export default ModalForm;
+export default ModalAppointmentForm;

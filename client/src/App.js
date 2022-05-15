@@ -4,8 +4,9 @@ import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 import Slider  from './UI Components/Slider/Slider';
 import {useState} from 'react'
-import ModalForm from './Components/Layout/ModalForm';
+import ModalAppointmentForm from './Components/Layout/ModalAppointmentForm';
 import PatientInfoQuery from './HOC/PatientQueryInfoSchedule';
+import ModalQueryForm from './Components/Layout/ModalQueryForm';
 
 
 
@@ -13,9 +14,10 @@ import PatientInfoQuery from './HOC/PatientQueryInfoSchedule';
 
 
 function App() {
-  const [openModal,setOpenModal]=useState(false);
+  const [openModalAppointment,setOpenModalAppointment]=useState(false);
+  const [openModalQuery,setOpenModalQuery] = useState(false);
   // const willOpenModal = (props)=>{
-  //   setOpenModal(true);
+  //   setOpenModalQuery(true);
   // }
   // const willCloseModal = (props)=>{
   //   setOpenModal(false);
@@ -23,10 +25,14 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
+      <main>
       <Slider/>
-      <PatientInfoQuery setOpenModal={setOpenModal}/>
+      <PatientInfoQuery setOpenModalAppointment={setOpenModalAppointment}/>
       
-      {openModal && <ModalForm setOpenModal={setOpenModal}/>}
+      {openModalAppointment && <ModalAppointmentForm setOpenModalAppointment={setOpenModalAppointment}/>}
+      
+      {openModalQuery && <ModalQueryForm setOpenModalQuery = {setOpenModalQuery}/>}
+      </main>
       
       <Footer/>
     </div>
