@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Footer.module.css";
-
+import Aux from "../../HOC/Auxilary";
 const Footer = () => {
   return (
-    <React.Fragment>
+    <Aux>
       {/* Footer */}
 
-      <body>
+     
         <div className={styles.page_container}>
           <div className={styles.content_wrap}>
             {/* <!-- all other page content --> */}
@@ -18,8 +18,8 @@ const Footer = () => {
             </p>
           </footer>
         </div>
-      </body>
-    </React.Fragment>
+      
+    </Aux>
   );
 };
 export default Footer;
