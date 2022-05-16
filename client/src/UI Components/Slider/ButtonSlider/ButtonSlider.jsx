@@ -4,7 +4,7 @@ import Aux from "../../../HOC/Auxilary";
 import leftArrow from "../Icons/left-arrow.svg"
 import rightArrow from "../Icons/right-arrow.svg"
 const buttonSlider=(props)=>{
-    console.log(props.direction)
+    // console.log(props.direction)
    let style={
        marginLeft:"2%",
        marginTop:"14%",
