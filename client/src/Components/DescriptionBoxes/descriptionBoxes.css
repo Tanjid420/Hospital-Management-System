@@ -1,0 +1,19 @@
+.description-boxes{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(233, 248, 248);
+}
+@media screen and (max-width:1000px) {
+    .description-boxes{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+
+}
