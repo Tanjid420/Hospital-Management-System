@@ -6,17 +6,8 @@ import {useState} from 'react'
 import ModalAppointmentForm from './Components/Layout/ModalAppointmentForm';
 import PatientInfoQuery from './HOC/PatientQueryInfoSchedule';
 import ModalQueryForm from './Components/Layout/ModalQueryForm';
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
 import ShortProfile from './Components/ShortProfiles/ShortProfiles'
 import DescriptionBoxes from './Components/DescriptionBoxes/descriptionBoxes';
->>>>>>> Ashraful
 function App() {
   const [openModalAppointment,setOpenModalAppointment]=useState(false);
   const [openModalQuery,setOpenModalQuery] = useState(false);
