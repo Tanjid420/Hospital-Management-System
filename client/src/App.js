@@ -1,4 +1,3 @@
-
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
@@ -7,12 +6,17 @@ import {useState} from 'react'
 import ModalAppointmentForm from './Components/Layout/ModalAppointmentForm';
 import PatientInfoQuery from './HOC/PatientQueryInfoSchedule';
 import ModalQueryForm from './Components/Layout/ModalQueryForm';
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+import ShortProfile from './Components/ShortProfiles/ShortProfiles'
+import DescriptionBoxes from './Components/DescriptionBoxes/descriptionBoxes';
+>>>>>>> Ashraful
 function App() {
   const [openModalAppointment,setOpenModalAppointment]=useState(false);
   const [openModalQuery,setOpenModalQuery] = useState(false);
@@ -32,6 +36,8 @@ function App() {
       {openModalAppointment && <ModalAppointmentForm setOpenModalAppointment={setOpenModalAppointment}/>}
       
       {openModalQuery && <ModalQueryForm setOpenModalQuery = {setOpenModalQuery}/>}
+      <ShortProfile/>
+      <DescriptionBoxes/>
       </main>
       
       <Footer/>
