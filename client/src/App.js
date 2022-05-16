@@ -2,9 +2,6 @@
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
-<<<<<<< HEAD
-import Modals from './Components/Layouts/Modals';
-=======
 import Slider  from './UI Components/Slider/Slider';
 import {useState} from 'react'
 import ModalAppointmentForm from './Components/Layout/ModalAppointmentForm';
@@ -13,7 +10,6 @@ import ModalQueryForm from './Components/Layout/ModalQueryForm';
 
 
 
->>>>>>> main
 
 
 
@@ -29,12 +25,6 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-<<<<<<< HEAD
-      <Modals>Hi</Modals>
-      <Footer>
-     
-      </Footer>
-=======
       <main>
       <Slider/>
       <PatientInfoQuery setOpenModalAppointment={setOpenModalAppointment}/>
@@ -45,7 +35,6 @@ function App() {
       </main>
       
       <Footer/>
->>>>>>> main
     </div>
   );
 }
