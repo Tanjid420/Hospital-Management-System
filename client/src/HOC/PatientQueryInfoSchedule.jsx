@@ -2,12 +2,13 @@ import Card from "@mui/material/Card";
 import react from "react";
 import CardContent from "@mui/material/CardContent";
 import styles from "./PatientQueryInfoSchedule.module.css";
-const PatientInfoQuery = ({ setOpenModalAppointment,setOpenModalQuery }) => {
+const PatientInfoQuery = (props) => {
+  
   return (
     <react.Fragment>
       <div className={styles.threecards}>
         <Card
-          onClick={() => setOpenModalAppointment(true)}
+          onClick={() => props.setOpenModalAppointment(true)}
           sx={{
             height: "200px",
             width: "200px",
@@ -31,10 +32,11 @@ const PatientInfoQuery = ({ setOpenModalAppointment,setOpenModalQuery }) => {
               
             }}
           >
-            Look For A Consultent
+            Take Appointment
           </CardContent>
         </Card>
-        <Card
+        <Card 
+        onClick={()=> props.setOpenModalConsultant(true)}
           sx={{
             height: "200px",
             width: "200px",
@@ -52,10 +54,10 @@ const PatientInfoQuery = ({ setOpenModalAppointment,setOpenModalQuery }) => {
               paddingTop: "3.5rem",
             }}
           >
-            Take Appointment
+            Look for Consultant
           </CardContent>
         </Card>
-        <Card onClick={()=> setOpenModalQuery(true)}
+        <Card onClick={()=> props.setOpenModalQuery(true)}
           sx={{
             height: "200px",
             width: "200px",
