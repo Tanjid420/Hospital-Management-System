@@ -8,9 +8,28 @@ import PatientInfoQuery from './HOC/PatientQueryInfoSchedule';
 import ModalQueryForm from './Components/Layout/ModalQueryForm';
 import ShortProfile from './Components/ShortProfiles/ShortProfiles'
 import DescriptionBoxes from './Components/DescriptionBoxes/descriptionBoxes';
+import CaseQuestionExp from './Components/Case_Question_Exp';
+import ModalQuestion from './Components/Layout/ModalQuestion';
+import ModalExp from './Components/Layout/ModalExp';
+import ModalConsultantForm from './Components/Layout/ModalConsultantForm';
+
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Layout from './Components/Pages/Layout';
+import About from './Components/Pages/About';
+
+
+
+
+
+
 function App() {
   const [openModalAppointment,setOpenModalAppointment]=useState(false);
   const [openModalQuery,setOpenModalQuery] = useState(false);
+  const [openModalConsultant,setOpenModalConsultant] = useState(false);
+
+  const [openModalQuestion,setOpenModalQuestion] = useState(false);
+  const [openModalExp,setOpenModalExp] = useState(false);
+  
   // const willOpenModal = (props)=>{
   //   setOpenModalQuery(true);
   // }
@@ -22,14 +41,29 @@ function App() {
       <Navbar/>
       <main>
       <Slider/>
-      <PatientInfoQuery setOpenModalAppointment={setOpenModalAppointment}/>
+      <PatientInfoQuery setOpenModalAppointment={setOpenModalAppointment} setOpenModalQuery={setOpenModalQuery} setOpenModalConsultant={setOpenModalConsultant}/>
       
       {openModalAppointment && <ModalAppointmentForm setOpenModalAppointment={setOpenModalAppointment}/>}
       
       {openModalQuery && <ModalQueryForm setOpenModalQuery = {setOpenModalQuery}/>}
+      {openModalConsultant && <ModalConsultantForm setOpenModalConsultant = {setOpenModalConsultant}/>}
       <ShortProfile/>
+      <CaseQuestionExp setOpenModalQuestion={setOpenModalQuestion} setOpenModalExp={setOpenModalExp}/>
+      {openModalQuestion && <ModalQuestion setOpenModalQuestion={setOpenModalQuestion}/>}
+      {openModalExp && <ModalExp setOpenModalExp = {setOpenModalExp}/>}
       <DescriptionBoxes/>
       </main>
+
+
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout/>}>
+          <Route path='/about' element={<About/>}/>
+
+        </Route>
+      </Routes>
+      </BrowserRouter>
+
       
       <Footer/>
     </div>

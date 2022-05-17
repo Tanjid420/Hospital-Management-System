@@ -8,9 +8,7 @@ const Footer = () => {
 
      
         <div className={styles.page_container}>
-          <div className={styles.content_wrap}>
-            {/* <!-- all other page content --> */}
-          </div>
+          
           <footer className={styles.footer}>
             
             <p className={styles.footer_content}>

@@ -4,11 +4,12 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import react from "react";
 import styles from "./ModalQueryForm.module.css";
-const Backdrop = (setOpenModalQuery) => {
+const Backdrop = ({setOpenModalQuery}) => {
   return <div className={styles.backdrop} onClick={()=>setOpenModalQuery(false)}></div>;
 };
 
-const Overlay = (setOpenModalQuery) => {
+const Overlay = ({setOpenModalQuery}) => {
+  
     return(
         <div className={styles.container}>
     <Card className={styles.card}>
@@ -37,7 +38,7 @@ const Overlay = (setOpenModalQuery) => {
     );
   
 };
-const ModalQueryForm = (setOpenModalQuery) => {
+const ModalQueryForm = ({setOpenModalQuery}) => {
   return (
     <react.Fragment>
       <Overlay setOpenModalQuery={setOpenModalQuery}/>
