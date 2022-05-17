@@ -6,10 +6,8 @@ import {useState} from 'react'
 import ModalAppointmentForm from './Components/Layout/ModalAppointmentForm';
 import PatientInfoQuery from './HOC/PatientQueryInfoSchedule';
 import ModalQueryForm from './Components/Layout/ModalQueryForm';
-<<<<<<< HEAD
 import ShortProfile from './Components/ShortProfiles/ShortProfiles'
 import DescriptionBoxes from './Components/DescriptionBoxes/descriptionBoxes';
-=======
 import CaseQuestionExp from './Components/Case_Question_Exp';
 import ModalQuestion from './Components/Layout/ModalQuestion';
 import ModalExp from './Components/Layout/ModalExp';
@@ -24,7 +22,6 @@ import About from './Components/Pages/About';
 
 
 
->>>>>>> Arnob
 function App() {
   const [openModalAppointment,setOpenModalAppointment]=useState(false);
   const [openModalQuery,setOpenModalQuery] = useState(false);
@@ -49,15 +46,12 @@ function App() {
       {openModalAppointment && <ModalAppointmentForm setOpenModalAppointment={setOpenModalAppointment}/>}
       
       {openModalQuery && <ModalQueryForm setOpenModalQuery = {setOpenModalQuery}/>}
-<<<<<<< HEAD
-      <ShortProfile/>
-      <DescriptionBoxes/>
-=======
       {openModalConsultant && <ModalConsultantForm setOpenModalConsultant = {setOpenModalConsultant}/>}
+      <ShortProfile/>
       <CaseQuestionExp setOpenModalQuestion={setOpenModalQuestion} setOpenModalExp={setOpenModalExp}/>
       {openModalQuestion && <ModalQuestion setOpenModalQuestion={setOpenModalQuestion}/>}
       {openModalExp && <ModalExp setOpenModalExp = {setOpenModalExp}/>}
->>>>>>> Arnob
+      <DescriptionBoxes/>
       </main>
 
 
