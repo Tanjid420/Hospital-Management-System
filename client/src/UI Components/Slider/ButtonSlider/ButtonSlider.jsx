@@ -4,7 +4,7 @@ import Aux from "../../../HOC/Auxilary";
 import leftArrow from "../Icons/left-arrow.svg"
 import rightArrow from "../Icons/right-arrow.svg"
 const buttonSlider=(props)=>{
-    console.log(props.direction)
+   
    let style={
        marginLeft:"2%",
        marginTop:"14%",
@@ -12,8 +12,8 @@ const buttonSlider=(props)=>{
        marginRight:"0px"
 
    }
-   console.log(props.position)
-   if(props.position=="left")
+   
+   if(props.position==="left")
    {
        style=style;
    }
@@ -25,7 +25,7 @@ return(
     <Aux>
         <button className="btn-slider" style={style} onClick={props.direction} >
             <div className="img">
-                 {props.position=="left"? (<img src={leftArrow}/>):(<img src={rightArrow}/>)}
+                 {props.position==="left"? (<img src={leftArrow}/>):(<img src={rightArrow}/>)}
             </div>
            
         </button>
