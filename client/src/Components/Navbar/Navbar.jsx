@@ -45,9 +45,10 @@ const Navbar = () => {
                   value={1}
                   className={styles.hoverButton}
                 />
-                <Tab label="About Us" value={2} className={styles.hoverButton}>
-                  <Link to="/about">About</Link>
-                </Tab>
+                
+                    <Tab label="About Us" value={2} className={styles.hoverButton}></Tab>
+                
+                
                 <Tab label="Contact" value={3} className={styles.hoverButton} />
               </Tabs>
             </>

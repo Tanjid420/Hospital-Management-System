@@ -1,0 +1,61 @@
+.signinContainer{
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 90%;
+    height: 450px;
+    box-shadow: 11px 12px 13px 12px rgb(207,207, 207);
+   border-radius: 60px;
+}
+ .signinContainer .imgContainer{
+     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+   height: 150px;
+   width: 150px;
+   background-color: aqua;
+   border-radius: 100%;
+   margin-left: 32%;
+} 
+.loginText{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    /* box-shadow: 10px 10px 10px 10px rgb(207,207, 207); */
+}
+
+.imgContainer img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+
+} 
+.signinContainer .form{
+    width: auto;
+    height: auto;
+  
+}
+.email{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.password{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    height: 25px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.submit{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    height: 25px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.submit:hover{
+    background-color: rgb(87, 218, 131);
+    
+    transition:.2s ease-in;
+}

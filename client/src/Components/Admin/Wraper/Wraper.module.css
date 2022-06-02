@@ -1,0 +1,12 @@
+.wraper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width:calc(100% - 268px);
+    height:auto;
+    margin-left: 270px;
+    margin-top: 70px;
+    background-color: #f0f2f5;
+    box-shadow: 2px 3px 5px 1px rgb(78, 78, 78);
+    border-radius: 15px;
+}
