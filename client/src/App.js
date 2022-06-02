@@ -39,7 +39,8 @@ function App() {
     <BrowserRouter>
     
     <div className="App">
-       <Navbar/> 
+      <Admin/>
+       {/* <Navbar/> 
       <main>
       <Slider/>
       <PatientInfoQuery setOpenModalAppointment={setOpenModalAppointment} setOpenModalQuery={setOpenModalQuery} setOpenModalConsultant={setOpenModalConsultant}/>
@@ -54,7 +55,7 @@ function App() {
       {openModalExp && <ModalExp setOpenModalExp = {setOpenModalExp}/>}
       <DescriptionBoxes/>
       </main> 
-      <Footer/> 
+      <Footer/>  */}
     </div>
     </BrowserRouter>
   );
