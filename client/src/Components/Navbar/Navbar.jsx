@@ -39,17 +39,40 @@ const Navbar = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab label="Home" value={0} className={styles.hoverButton} />
-                <Tab
-                  label="Services"
-                  value={1}
-                  className={styles.hoverButton}
-                />
-                
-                    <Tab label="About Us" value={2} className={styles.hoverButton}></Tab>
-                
-                
-                <Tab label="Contact" value={3} className={styles.hoverButton} />
+                <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
+                  <Tab label="Home" value={0} className={styles.hoverButton} />
+                </Link>
+                <Link
+                  to="/services"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Tab
+                    label="Services"
+                    value={1}
+                    className={styles.hoverButton}
+                  />
+                </Link>
+
+                <Link
+                  to="/aboutus"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Tab
+                    label="About Us"
+                    value={2}
+                    className={styles.hoverButton}
+                  />
+                </Link>
+                <Link
+                  to="/contact"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Tab
+                    label="Contact"
+                    value={3}
+                    className={styles.hoverButton}
+                  />
+                </Link>
               </Tabs>
             </>
           )}
