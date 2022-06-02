@@ -1,0 +1,24 @@
+.featuresContainer{
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px;
+    position: fixed;
+    height: 500px;
+    width: 230px;
+    background-color: #344767;
+    border-radius: 20px;
+    /* box-shadow: 11px 12px 13px 12px rgb(207,207, 207); */
+}
+.topBox{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    font-size: large;
+    color: white;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    background-color: #344767;
+}

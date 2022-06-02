@@ -1,0 +1,36 @@
+
+.innerChartContainer{
+    display: flex;
+    width: 100%;
+    height: 65%;
+    /* background-color: yellowgreen; */
+    /* justify-content: space-between; */
+}
+.innerChartContainer1{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellowgreen; */
+    /* justify-content: space-between; */
+}
+.text{
+    padding: 5px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:1.2rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 700;
+    background-color: transparent;
+    /* background-color: yellowgreen; */
+}
+@media screen and (max-width:1020px) {
+ 
+    .innerChartContainer{
+        width: 90%;
+    }
+    
+}
+

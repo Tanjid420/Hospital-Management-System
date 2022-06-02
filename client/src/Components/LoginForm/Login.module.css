@@ -1,0 +1,28 @@
+.loginWrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.loginContainer{
+    display: flex;
+    position: relative;
+    margin-top:50px;
+    width:70%;
+    height: 700px;
+    justify-content: space-between;
+    /* justify-content: center; */
+    background-color: whitesmoke;
+}
+.Box{
+    border-radius: 50%;
+}
+@media screen and (max-width:500px) {
+    .login-container{
+        display: block;
+        
+        
+    }
+    
+}

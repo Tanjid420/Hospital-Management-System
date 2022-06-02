@@ -1,0 +1,24 @@
+.sideBox{
+    margin: 10px 0px 0px 10px;
+    position: relative;
+    height:100%;
+    width: 50%;
+    background-color:white;
+    border-radius: 10px;
+}
+.imgContainer{
+    height: 76%;
+    width: 100%;
+    background-color: yellow;
+}
+.imgContainer img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width:500px) {
+    .sideBox{
+        width: 100%;
+    }
+    
+}

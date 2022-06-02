@@ -16,13 +16,12 @@ import ModalConsultantForm from './Components/Layout/ModalConsultantForm';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Layout from './Components/Pages/Layout';
 import About from './Components/Pages/About';
-
-
-
-
-
-
+import LoginForm from './Components/LoginForm/Login';
+import axios from 'axios'
+import Random from "./random"
+import Admin from './Components/Admin/Admin';
 function App() {
+
   const [openModalAppointment,setOpenModalAppointment]=useState(false);
   const [openModalQuery,setOpenModalQuery] = useState(false);
   const [openModalConsultant,setOpenModalConsultant] = useState(false);
@@ -37,8 +36,10 @@ function App() {
   //   setOpenModal(false);
   // }
   return (
+    <BrowserRouter>
+    
     <div className="App">
-      <Navbar/>
+       <Navbar/> 
       <main>
       <Slider/>
       <PatientInfoQuery setOpenModalAppointment={setOpenModalAppointment} setOpenModalQuery={setOpenModalQuery} setOpenModalConsultant={setOpenModalConsultant}/>
@@ -52,21 +53,10 @@ function App() {
       {openModalQuestion && <ModalQuestion setOpenModalQuestion={setOpenModalQuestion}/>}
       {openModalExp && <ModalExp setOpenModalExp = {setOpenModalExp}/>}
       <DescriptionBoxes/>
-      </main>
-
-
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout/>}>
-          <Route path='/about' element={<About/>}/>
-
-        </Route>
-      </Routes>
-      </BrowserRouter>
-
-      
-      <Footer/>
+      </main> 
+      <Footer/> 
     </div>
+    </BrowserRouter>
   );
 }
 
