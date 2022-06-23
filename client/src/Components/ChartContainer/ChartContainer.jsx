@@ -1,5 +1,5 @@
 import React from "react";
-import LineChart from "../Chart/LineChart";
+import LineChart from "../Chart/LineChart/Linechart/LineChart";
 import styles from "./ChartContainer.module.css"
 const chartContainer=(props)=>{
     return(

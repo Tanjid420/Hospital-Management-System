@@ -8,7 +8,8 @@ import notificationImg from "../../../assets/notification.png"
 import logoutImg from "../../../assets/logout.png"
 import profileImg from "../../../assets/profile.png"
 import testImg from "../../../assets/test.png"
-import { brown } from "@mui/material/colors";
+import patientImg from "../../../assets/patient1.png"
+import { useLocation } from "react-router-dom";
 const FeaturesBox=(props)=>{
     const information=[{
         img:dashboardImg,
@@ -17,7 +18,7 @@ const FeaturesBox=(props)=>{
         alt:"Dashboard"
     },{
         img:doctorImg,
-        name:"Doctor",
+        name:"Doctors",
         id:"doctor",
         alt:"Doctor"
     },{
@@ -25,6 +26,12 @@ const FeaturesBox=(props)=>{
         name:"Employee",
         id:"employee",
         alt:"Employee"
+    },
+    {
+        img:patientImg,
+        name:"Patients",
+        id:"patient",
+        alt:"patient"
     },{
         img:profileImg ,
         name:"Profile",
@@ -35,23 +42,41 @@ const FeaturesBox=(props)=>{
         name:"Test",
         id:"test",
         alt:"Test"
-    },{
+    },
+    {
+        img:notificationImg ,
+        name:"Notification",
+        id:"notification",
+        alt:"notification"
+    },
+    {
         img: logoutImg,
         name:"Logout",
         id:"logout",
         alt:"Logout"
     }]
+    const location=useLocation();
+    let path=""
+    if(location.pathname=="/")
+    {
+        path="dashboard"
+    }
+    else{
+            path=location.pathname.split('/')[1];
+    }
+   
+    // console.log( `its the path ${path}`)
     let [appState,setAppState]=useState({
-        activeObject:"dashboard"
+        activeObject:path
     })
     const clickEventHandler=(id)=>{
-        props.contentToLoad(id)
       let newAppstate=id;
       setAppState({
           activeObject:newAppstate
       })
-      console.log(id);
+    //   console.log(id);
     }
+    // console.log(appState.activeObject)
     return(
         <div className={styles.featuresContainer}>
             <div className={styles.topBox}>
@@ -64,12 +89,7 @@ const FeaturesBox=(props)=>{
                    <LabelContainer clickStatus={el.id==appState.activeObject?1:0} img={el.img} alt={el.alt} name={el.name} key={el.id} id={el.id} clicked={clickEventHandler} />
                )
            })}
-            {/* <LabelContainer img={dashboardImg} alt={"Dashboard"} name={"Dashboard"}/>
-            <LabelContainer img={doctorImg} alt={"Doctor"} name={"Doctor"}/>    
-            <LabelContainer img={employeeImg} alt={"Employee"} name={"Employee"}/>
-            <LabelContainer img={profileImg} alt={"User"} name={"User"}/>
-            <LabelContainer img={testImg} alt={"Test"} name={"Test"}/>
-            <LabelContainer img={logoutImg} alt={"Logout"} name={"Logout"}/> */}
+           
 
         </div>
     )
