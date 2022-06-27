@@ -1,0 +1,95 @@
+.chartBox{ 
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 50px;
+    box-shadow: 2px 3px 5px 1px rgb(78, 78, 78);
+    /* justify-content: center; */
+    /* background-color: green; */
+    height: 300px;
+    width: 300px;
+    /* border: 4px solid gold; */
+    /* background-color: black; */
+    border-radius: 15px;
+}
+.infoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* height: 50px; */
+    /* background-color: yellow; */
+}
+.text{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 2px;
+    width: auto;
+    height:1px;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:1.2rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 300;
+    background-color: transparent;
+}
+.statContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40px;
+    /* background-color: rgb(255, 255, 255); */
+}
+.percentage{
+    height: 30px;
+    width: auto;
+    align-self: flex-end;
+    margin-left: 15px;
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.02857em;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;;
+}
+.percentageInfo{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 0.875rem;;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    color: #7b809a;
+    font-weight: 300;
+}
+.statisticsBox{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 80%;
+    /* background-color: #4CAF50; */
+}
+.overallStat{
+     display: flex;
+     flex-wrap: wrap;
+    /* background-color:rgb(125, 194, 116); */
+}
+.header{
+    margin:5px 2px 0px 15px;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:.9rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 100;
+    background-color: transparent;
+}
+.headerValue{
+    margin-left: 15px;
+    align-self: flex-end;
+    margin-left: 15px;
+    color: #4CAF50;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.02857em;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;;
+}

@@ -1,0 +1,65 @@
+.signupContainer{
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 90%;
+    height: 450px;
+    box-shadow: 11px 12px 13px 12px rgb(207,207, 207);
+   border-radius: 40px;
+}
+.name{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.email{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.password{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.confirmPassword{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.sex{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.file{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.submit{
+    border: 2px solid black;
+    margin: 10px;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 1px rgb(207,207, 207);
+}
+.submit:hover{
+    background-color: rgb(87, 218, 131);
+    
+    transition:.2s ease-in;
+}
+
+
+

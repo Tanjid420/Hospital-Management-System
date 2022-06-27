@@ -1,6 +1,4 @@
-
-import React, { useState } from "react";
-import styles from "./Navbar.module.css"
+import BloodtypeIcon from "@mui/icons-material/Bloodtype";
 import {
   AppBar,
   Tab,
@@ -10,14 +8,15 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import BloodtypeIcon from '@mui/icons-material/Bloodtype';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DrawerNav from "./DrawerNav";
+import styles from "./Navbar.module.css";
 const Navbar = () => {
   const [value, setValue] = useState();
   const theme = useTheme();
-  
+
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  
 
   return (
     <React.Fragment>
@@ -40,12 +39,41 @@ const Navbar = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab label="Home" value={0} className={styles.hoverButton}/>
-                <Tab label="Services" value={1} className={styles.hoverButton} />
-                <Tab label="About Us" value={2} className={styles.hoverButton}/>
-                <Tab label="Contact" value={3} className={styles.hoverButton}/>
+                <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
+                  <Tab label="Home" value={0} className={styles.hoverButton} />
+                </Link>
+                <Link
+                  to="/services"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Tab
+                    label="Services"
+                    value={1}
+                    className={styles.hoverButton}
+                  />
+                </Link>
+
+                <Link
+                  to="/aboutus"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Tab
+                    label="About Us"
+                    value={2}
+                    className={styles.hoverButton}
+                  />
+                </Link>
+                <Link
+                  to="/contact"
+                  style={{ textDecoration: "none", color: "#fff" }}
+                >
+                  <Tab
+                    label="Contact"
+                    value={3}
+                    className={styles.hoverButton}
+                  />
+                </Link>
               </Tabs>
-            
             </>
           )}
         </Toolbar>

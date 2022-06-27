@@ -3,10 +3,11 @@
     height: 30px;
     width: 200px;
     background-color:transparent;
-    margin: 350px 0px 0px 610px;
+    margin:450px 0px 0px 50%;
     transform: translateX(-50%);
     display: flex;
 }
+
 .items
 {
     margin: 10px 5px 10px 10px;

@@ -1,0 +1,69 @@
+.dashboardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+.lineChartContainer{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* background-color: green; */
+    height: 470px;
+    width: 800px;
+    /* background-color: black; */
+    justify-content:center;
+    align-items: center;
+}
+.chartContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+ 
+}
+.text{
+    padding: 5px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:1.2rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 700;
+    background-color: transparent;
+}
+.hello{
+    height: 100px;
+    width: 300px;
+    background-color: rgb(216, 202, 202);
+}
+.listContainer{
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.199);
+
+}
+.PieChartContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.PieChartContainer1{
+margin:20px 10px 20px 10px ;
+    
+}
+
+@media screen and (max-width:1024px) {
+    .lineChartContainer{
+        width: 90%;
+    }
+    .lineChartContainer{
+        width: 90%;
+    }
+    
+}
