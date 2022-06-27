@@ -2,7 +2,7 @@ import axios from 'axios'
 /// random string
 const BASEURL = "http://localhost:4000";
 const API = axios.create({baseURL:BASEURL})
-export const ra = async (x)=>{
+export const GET = async (x)=>{
     const s = await API.get(x);
     return s;
 }
