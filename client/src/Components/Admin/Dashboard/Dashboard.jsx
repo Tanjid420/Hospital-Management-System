@@ -165,7 +165,7 @@ const clickHandler=(id)=>{
                <div className={styles.text}>
                   HOSPITAL SURVEY
                </div>
-               <LineChart/>
+               <LineChart label={"Amount Received"}/>
             </div>
             <div className={styles.chartContainer}>
             {hospitalInformation.map((el,id)=>{
