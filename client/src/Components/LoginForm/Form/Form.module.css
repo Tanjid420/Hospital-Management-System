@@ -1,0 +1,14 @@
+.sideForm{
+    margin: 10px;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+}
+@media screen and (max-width:500px) {
+    .side-form{
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+}

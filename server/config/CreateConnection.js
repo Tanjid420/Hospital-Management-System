@@ -18,23 +18,29 @@ const Admin=require("../models/Admin")
 class Database{
       establishConnection(){
         const connectToDatabase= mysql.createConnection({
-            host:'localhost',
+            host:'127.0.0.1',
             user:'root',
-            password:'',
-            database:'Hospital_Management_System'
+            password:'jaspershebin420@',
+            database:'hospital_management_system'
         })
         connectToDatabase.connect(err=>{
             if(err)
              throw err
+             
              console.log("it's established")
         }) 
+
          return connectToDatabase;
       
+         
     }
+    
     
         createUser(){
     
             const connectToDatabase=this.establishConnection();
+          
+
               connectToDatabase.query(User,(err,result)=>{
                 if(err)
                     throw err;

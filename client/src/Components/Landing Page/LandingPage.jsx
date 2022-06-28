@@ -8,7 +8,7 @@ import employee from "../../LandingPageImage/nurse-with-uniform-female-nurse-hos
 const LandingPage = () => {
   return (
     <react.Fragment>
-      <h1>You Are A... </h1>
+      <h1 >You Are A... </h1>
       <div className={styles.container1}>
       <div>
       <Link to="/doctor">

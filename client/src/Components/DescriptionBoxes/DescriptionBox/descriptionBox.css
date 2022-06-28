@@ -1,4 +1,5 @@
 .description-box{
+    box-sizing: border-box;
     margin:10px;
     width: 28%;
     height: 370px;
@@ -15,12 +16,20 @@
     width: 100%;
     height: 200px;
     background-color: greenyellow;
+    overflow: hidden;
+    margin: 0 auto;
 
 }
 .description-image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: 0.5s all ease-in-out;
+}
+.description-image:hover img{
+ 
+  
+    transform: scale(1.2);
 }
 .description{
     display: flex;
