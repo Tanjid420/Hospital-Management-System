@@ -1,0 +1,61 @@
+.container{
+   display: block;
+   width: 100%;
+}
+.profileImgConainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+.text{
+    margin-left: -85px;
+    padding: 2px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:1.2rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 700;
+    background-color: transparent;
+}
+.infoContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.formContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input{
+    text-decoration: none;
+    height: 25px;
+    width: 130%;
+    margin: 3px;
+    border-radius: 8px;
+}
+.input1{
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 30px;
+    margin-bottom: 50px;
+
+}
+.file{
+    margin:10px;
+}
+.additionalInfo{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
