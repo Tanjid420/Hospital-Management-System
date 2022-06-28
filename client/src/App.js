@@ -12,6 +12,7 @@ import Services from "./Components/Pages/ServicesPage";
 import AboutUs from "./Components/Pages/AboutPage";
 import LoginPage from "./Components/Pages/LoginPage";
 import DoctorPage from "./Components/Pages/DoctorPage";
+import PatientPage from "./Components/Pages/PatientPage";
 function App() {
  
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path="/dashboard" exact element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Dashboard/></Wraper></>} />
           <Route path="/doctor" exect element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Doctor/></Wraper></>} />
           <Route path="/employee" exect element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Employee/></Wraper></>} /> */}
-
+          <Route path="/" exact element={<LandingPage/>} />
           <Route path="/patient" exact element={<PateintPage />} />
           <Route path="/doctor" exact element={<LoginPage/>} />
           <Route path="/employee" exact element={<LoginPage/>} />
