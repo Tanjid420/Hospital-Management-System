@@ -20,8 +20,8 @@ class Database{
         const connectToDatabase= mysql.createConnection({
             host:'127.0.0.1',
             user:'root',
-            password:'{Notredame5058}',
-            database:'Hospital_Management_System'
+            password:'jaspershebin420@',
+            database:'hospital_management_system'
         })
         connectToDatabase.connect(err=>{
             if(err)
@@ -34,6 +34,7 @@ class Database{
       
          
     }
+    
     
         createUser(){
     

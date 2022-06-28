@@ -2,7 +2,7 @@ import React  from "react";
 import Box from "./SideBox/Box"
 import Form from "./Form/Form"
 import styles from "./Login.module.css"
-const login=()=>{
+const Login=()=>{
    return(
         <div className={styles.loginWrapper}>
               <div className={styles.loginContainer}>
@@ -16,4 +16,4 @@ const login=()=>{
     )
    
 }
-export default login;
+export default Login;

@@ -5,13 +5,42 @@ import CardContent from "@mui/material/CardContent";
 import react from "react";
 import reactDOM from "react-dom";
 import styles from "./ModalAppointmentForm.module.css";
+import Axios from 'axios';
+import { useState } from "react";
 
 const Backdrop = ({ setOpenModalAppointment }) => {
   return (
     <div className={styles.backdrop} onClick={() => setOpenModalAppointment(false)}></div>
   );
 };
-const Overlay = ({ setOpenModalAppointment }) => {
+const Overlay = ({ setOpenModalAppointment}) => {
+  const [patientName,setPatientName] = useState("");
+  const [patientEmail,setPatientEmail] = useState("");
+  const [patientPhone,setPatientPhone] = useState("");
+  const [patientTime,setPatientTime] = useState("");
+  const [patientDate,setPatientDate] = useState("");
+  const [patientMedicalHistory,setPatientMedicalHistory] = useState("");
+  const closeModal = ()=>{
+   
+    setOpenModalAppointment(false);
+  }
+
+  const appointment = async(e)=>{
+    e.preventDefault();
+    const res= await Axios.post("http://localhost:4000/appointmentInfo",{
+      name: patientName,
+      email: patientEmail,
+      phone: patientPhone,
+      time:patientTime,
+      date: patientDate,
+      medicalhistory: patientMedicalHistory
+    })
+    console.log(res);
+    closeModal();
+   
+  }
+
+
   return (
     <div className={styles.container}>
       <Card className={styles.card}>
@@ -20,26 +49,26 @@ const Overlay = ({ setOpenModalAppointment }) => {
           <form className={styles.form}>
             <div className={styles.infos}>
               <label>Name:</label>
-              <input type="text"></input>
+              <input type="text" onChange={(e)=>{setPatientName(e.target.value)}}></input>
               <label>E-mail:</label>
-              <input type="e-mail"></input>
+              <input type="e-mail" onChange={(e)=>{setPatientEmail(e.target.value)}}></input>
               <label>Phone:</label>
-              <input type="number"></input>
+              <input type="number" onChange={(e)=>{setPatientPhone(e.target.value)}}></input>
             </div>
             <div className={styles.times}>
               <label>Time:</label>
-              <input type="time"></input>
+              <input type="time" onChange={(e)=>{setPatientTime(e.target.value)}}></input>
               <label>Date:</label>
-              <input type="date"></input>
+              <input type="date" onChange={(e)=>{setPatientDate(e.target.value)}}></input>
               <label>Medical History:</label>
-              <input type="text"></input>
+              <input type="text" onChange={(e)=>{setPatientMedicalHistory(e.target.value)}}></input>
             </div>
           </form>
         </CardContent>
         <CardActions>
           <Button
             className={styles.button1}
-            onClick={() => setOpenModalAppointment(false)}
+            onClick={appointment}
           >
             Submit
           </Button>

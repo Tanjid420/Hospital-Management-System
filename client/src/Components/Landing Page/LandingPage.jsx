@@ -4,11 +4,11 @@ import styles from "./LandingPage.module.css";
 import doctor from "../../LandingPageImage/doctor-holding-clipboard-with-patient-info-vector.jpg";
 import sickMan from "../../LandingPageImage/sick-man-holding-saline-bag-in-hospital.jpg";
 import employee from "../../LandingPageImage/nurse-with-uniform-female-nurse-hospital-worker-vector.jpg";
-import Admin from "../Admin/Admin";
+
 const LandingPage = () => {
   return (
     <react.Fragment>
-      <h1>You Are A... </h1>
+      <h1 >You Are A... </h1>
       <div className={styles.container1}>
       <div>
       <Link to="/doctor">
