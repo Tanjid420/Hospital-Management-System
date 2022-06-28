@@ -1,11 +1,22 @@
-.box{
-    width: 200px;
-    height: 340px;
-    margin: 20px;
-    background: rgb(202, 172, 172);
+.container{
+    display: flex;
+    /* background-color: green; */
+    margin: 10px;
+    flex-wrap: wrap;
+}
+.infoContainer{
+    box-sizing: border-box;
+ margin: 10px;
+  /* border: 2px solid black; */
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  background-color: yellow;
+  /* justify-content: space-between; */
 
 }
 .image{
+    box-sizing: border-box;
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -32,7 +43,7 @@
     box-sizing: border-box;
     width: auto;
     height: 40px;
-    background-color: gold;
+    background-color: rgb(95, 86, 32);
     margin-top:10px ;
     padding: 8px;
 }

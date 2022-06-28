@@ -41,7 +41,27 @@
     width: 300px;
     background-color: rgb(216, 202, 202);
 }
+.listContainer{
+    height: auto;
+    width: 100%;
+    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.199);
+
+}
+.PieChartContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.PieChartContainer1{
+margin:20px 10px 20px 10px ;
+    
+}
+
 @media screen and (max-width:1024px) {
+    .lineChartContainer{
+        width: 90%;
+    }
     .lineChartContainer{
         width: 90%;
     }

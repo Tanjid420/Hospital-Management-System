@@ -9,10 +9,11 @@ const LineChart = (props) => {
       {/* <div className={styles.text} >Hospital Survey</div> */}
       <Line
         data={{
+          //all these data will come from props
           labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
           datasets: [
             {
-              label: '# data of votes',
+              label: props.label,
               data: [120, 190, 100, 500, 200,50],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

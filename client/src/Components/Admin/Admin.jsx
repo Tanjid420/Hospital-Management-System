@@ -3,26 +3,12 @@ import styles from "./Admin.module.css"
 import FeaturesBox from "./FeaturesBox/FeaturesBox";
 import Dashboard from "./Dashboard/Dashboard";
 import Wraper from "./Wraper/Wraper";
-const Admin=()=>{
-    // let [renderedObject,setRenderedObject]=useState({
-    //     objectToRender:<Signup/>
-    // })
-    const contentLoaderHandler=(id)=>{
-        // switch(id){
-        //     case "logout":
-        //         setRenderedObject({objectToRender:<Signin/>})
-        //         break;
-
-        // }
-        console.log(id)
-    }
+import Doctor from "./Doctor/Doctor";
+import { getThemeProps } from "@mui/system";
+const Admin=(props)=>{
     return(
         <div className={styles.adminContainer} >
-            <FeaturesBox contentToLoad={contentLoaderHandler}/>
-            <Wraper>
-               <Dashboard/>      
-            </Wraper>
-            {/* {renderedObject.objectToRender} */}
+          {props.children}
         </div>
     )
 }
