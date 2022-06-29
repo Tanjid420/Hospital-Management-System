@@ -37,9 +37,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", routes);
 // app.get("/signin", 
-db.query("show tables",(err,result)=>{
-  console.log(result)
-})
+// db.query("show tables",(err,result)=>{
+//   console.log(result)
+// })
 // app.get("/abcd",(req,res)=>{
 //     console.log("Hello");
 //     res.status(200).json({x:"hsadadadad"})

@@ -16,41 +16,41 @@ const FeaturesBox=(props)=>{
     const information=[{
         img:dashboardImg,
         name:"Dashboard",
-        id:"dashboard",
+        id:"admin/dashboard",
         alt:"Dashboard"
     },{
         img:doctorImg,
         name:"Doctors",
-        id:"doctor",
+        id:"admin/doctor",
         alt:"Doctor"
     },{
         img:employeeImg,
         name:"Employee",
-        id:"employee",
+        id:"admin/employee",
         alt:"Employee"
     },
     {
         img:patientImg,
         name:"Patients",
-        id:"patients",
+        id:"admin/patients",
         alt:"patient"
     },{
         img:profileImg ,
         name:"Profile",
-        id:`profile/${user.id}`,
+        id:`admin/profile`,
         alt:"Profile"
     },{
         img:testImg ,
         name:"Test",
-        id:"test",
+        id:"admin/test",
         alt:"Test"
     },
-    // {
-    //     img:notificationImg ,
-    //     name:"Notification",
-    //     id:"notification",
-    //     alt:"notification"
-    // },
+    {
+        img:notificationImg ,
+        name:"Notification",
+        id:"admin/notification",
+        alt:"notification"
+    },
     {
         img: logoutImg,
         name:"Logout",

@@ -36,37 +36,48 @@ function App() {
       //fetch data from DB and store in user autharization and id
     let temp=userState;
     temp={
-      auth:"doctor",
-      id:"12"
+      auth:"admin",
+      id:"12",
+      img:"https://images.unsplash.com/photo-1501705388883-4ed8a543392c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     }
     
     setUserState({
       auth:temp.auth,
-      id:temp.id
+      id:temp.id,
+      img:temp.img
     });
   },[])
   return (
     <BrowserRouter>
 
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         
         <main></main>
       
         <UserContext.Provider value={user}>
         <Routes>
-          {/* <Route path="/" element={<> <Admin><FeaturesBox /></Admin>,<Wraper><Dashboard/></Wraper></>} />
-          <Route path="/dashboard" exact element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Dashboard/></Wraper></>} />
-          <Route path="/doctor" exect element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Doctor/></Wraper></>} />
-          <Route path="/employee" exect element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Employee/></Wraper></>} /> */}
-          <Route path="/" exact element={<LandingPage/>} />
+          <Route path="/" exect element={<LandingPage/>}/>
           <Route path="/patient" exact element={<PateintPage />} />
           <Route path="/doctor" exact element={<LoginPage/>} />
           <Route path="/employee" exact element={<LoginPage/>} />
+          <Route path="/admin" element={<> <Admin/>,<Wraper user={userState}><Dashboard/></Wraper></>} />
+          <Route path="admin/dashboard" exact element={<> <Admin/>,<Wraper user={userState}><Dashboard/></Wraper></>} />
+          <Route path="admin/doctor" exect element={<> <Admin/>,<Wraper user={userState}><Doctor/></Wraper></>} />
+          <Route path="admin/employee" exect element={<> <Admin/>,<Wraper user={userState}><Employee/></Wraper></>} />
+          <Route path="admin/patients" exect element={<> <Admin/>,<Wraper user={userState}><Patients/></Wraper></>} />
+          <Route path=":id/profile" exect element={<><Wraper user={userState}><InfoUpdate/></Wraper></>} />
+
+          <Route path="admin/doctor/:id" exact element={<><Admin><FeaturesBox/></Admin>,<Wraper user={userState}><DoctorProfile/></Wraper></>} />
+          <Route path="admin/employee/:id" exact element={<><Admin><FeaturesBox/></Admin>,<Wraper user={userState}><EmployeeProfile/></Wraper></>} />
+          <Route path="/patient" exect element={<PateintPage />} />
+          <Route path="/doctor" exact element={<DoctorPage/>} />
+          <Route path="/employee" exact element={<EmployeePage/>} />
           <Route path="/services" exact element={<Services/>} />
           <Route path="/aboutus" exact element={<AboutUs/>} />
           <Route path="/contact" exact element={<Contact/>} />
-          <Route path="/doctorpage" exact element={<DoctorPage/>} />
+          <Route path="/doctorpage" exact element={<Wraper user={userState}><DoctorPage/></Wraper>} />
+          <Route path="/logout" exact element={<LoginPage/>}/>
         </Routes>
         </UserContext.Provider>
         {/* <Footer /> */}

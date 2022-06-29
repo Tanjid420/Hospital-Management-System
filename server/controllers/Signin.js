@@ -43,7 +43,7 @@ module.exports = signin = async (req, res) => {
 
   try {
     db.query(
-      "SELECT * FROM user WHERE email = ?",
+      "SELECT * FROM User WHERE email = ?",
       [email],
       async (error, results, fields) => {
         if (error) {
