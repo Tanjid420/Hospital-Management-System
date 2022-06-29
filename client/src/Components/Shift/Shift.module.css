@@ -1,0 +1,43 @@
+.shiftContainer{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.text
+{
+    padding: 5px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:1.2rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 700;
+    background-color: transparent;
+}
+.shift{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 20px;
+    width: 200px;
+    border: 2px solid black;
+   
+}
+.shiftAdmin{
+    margin-left:15px;
+    margin-right: 15px;
+}
+.text1{
+    padding: 2px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:.9rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 300;
+    background-color: transparent;
+}
