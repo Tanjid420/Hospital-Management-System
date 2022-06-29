@@ -10,6 +10,7 @@ import ModalConsultantForm from '../Layout/ModalConsultantForm';
 import ShortProfiles from "../ShortProfiles/ShortProfiles"
 import DescriptionBoxes from "../DescriptionBoxes/descriptionBoxes"
 import Slider from '../../UI Components/Slider/Slider'
+import Navbar from '../Navbar/Navbar';
 
 
 const PatientPage = ()=> {
@@ -22,7 +23,7 @@ const PatientPage = ()=> {
 
     return (
         <react.Fragment>
-         
+         <Navbar/>
           <main>
           
           <Slider/>
