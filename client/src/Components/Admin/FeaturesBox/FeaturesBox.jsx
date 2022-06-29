@@ -37,7 +37,7 @@ const FeaturesBox=(props)=>{
     },{
         img:profileImg ,
         name:"Profile",
-        id:`admin/profile/${user.id}`,
+        id:`admin/profile`,
         alt:"Profile"
     },{
         img:testImg ,
