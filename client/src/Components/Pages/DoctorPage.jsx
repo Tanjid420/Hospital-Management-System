@@ -3,9 +3,11 @@ import Admin from "../Admin/Admin";
 import { useEffect } from "react";
 import { Route, Navigate, useNavigate } from "react-router-dom";
 // import jwt from 'jsonwebtoken'
-const JWT_secret = "fuckShantoHard";
-
+import DoctorProfile from "../Profile/DoctorProfile/DoctorProfile";
+import styles from "./Styles.module.css"
+import NavbarLogin from "../NavbarLogin/NavbarLogin";
 const DoctorPage = () => {
+  const JWT_secret = "fuckShantoHard";
   const navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -21,9 +23,10 @@ const DoctorPage = () => {
     }
   }, []);
   return (
-    <react.Fragment>
-      <Admin />
-    </react.Fragment>
+    <div className={styles.container}>
+      <NavbarLogin/>
+         <DoctorProfile/>
+    </div>
   );
 };
 export default DoctorPage;

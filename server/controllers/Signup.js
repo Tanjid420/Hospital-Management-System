@@ -21,7 +21,7 @@ module.exports=signup=(req,res)=>{
         console.log(err);
       }
       db.query(
-        "INSERT INTO user (ID,Name,Email,Password,Sex) VALUES(?,?,?,?,?)",
+        "INSERT INTO User (ID,Name,Email,Password,Sex) VALUES(?,?,?,?,?)",
         [ uuidv4(),username, email, hash, sex],
         (err, result) => {
           console.log(err);
