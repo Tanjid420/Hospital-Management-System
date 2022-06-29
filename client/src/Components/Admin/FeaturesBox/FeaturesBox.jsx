@@ -57,7 +57,7 @@ const FeaturesBox=(props)=>{
     }]
     const location=useLocation();
     let path=""
-    if(location.pathname=="/")
+    if(location.pathname==="/")
     {
         path="dashboard"
     }
@@ -86,7 +86,7 @@ const FeaturesBox=(props)=>{
             
            {information.map(el=>{
                return(
-                   <LabelContainer clickStatus={el.id==appState.activeObject?1:0} img={el.img} alt={el.alt} name={el.name} key={el.id} id={el.id} clicked={clickEventHandler} />
+                   <LabelContainer clickStatus={el.id===appState.activeObject?1:0} img={el.img} alt={el.alt} name={el.name} key={el.id} id={el.id} clicked={clickEventHandler} />
                )
            })}
            

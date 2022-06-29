@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 
 import { BrowserRouter, Routes, Route, useParams} from "react-router-dom";
 
-import PateintPage from "./Components/Pages/PatientPage";
+
 import EmployeePage from "./Components/Pages/EmployeePage";
 import Contact from "./Components/Pages/ContactPage";
 import Services from "./Components/Pages/ServicesPage";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/doctor" exect element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Doctor/></Wraper></>} />
           <Route path="/employee" exect element={<> <Admin><FeaturesBox/></Admin>,<Wraper><Employee/></Wraper></>} /> */}
           <Route path="/" exact element={<LandingPage/>} />
-          <Route path="/patient" exact element={<PateintPage />} />
+          <Route path="/patient" exact element={<PatientPage />} />
           <Route path="/doctor" exact element={<LoginPage/>} />
           <Route path="/employee" exact element={<LoginPage/>} />
           <Route path="/services" exact element={<Services/>} />
@@ -37,7 +37,7 @@ function App() {
           <Route path="/doctorpage" exact element={<DoctorPage/>} />
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </BrowserRouter>
   );

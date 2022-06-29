@@ -82,4 +82,4 @@ const Doctor=(props)=>{
        </div>
     )
 }
-export default Doctor
+export default Doctor;
