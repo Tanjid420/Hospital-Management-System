@@ -3,7 +3,7 @@ const User=require("../models/User")
 const Dept=require("../models/Dept")
 const Shift=require("../models/Shift")
 const Record =require("../models/Record")
-const MedicalHistory=require("../models/MedicalHistory")
+const PatientInfo= require("../models/PatientInfo")
 const Fees=require("../models/Fees")
 const Facilities=require("../models/Facilities")
 const DuplicateUser=require("../models/DuplicateUser")
@@ -75,9 +75,9 @@ class Database{
           console.log(result)
       })
     } 
-    createMedicalHistory(){
+    createPatientInfo(){
         const connectToDatabase=this.establishConnection();
-        connectToDatabase.query(MedicalHistory,(err,result)=>{
+        connectToDatabase.query(PatientInfo,(err,result)=>{
           if(err)
               throw err;
           console.log(result)

@@ -5,38 +5,42 @@ const express = require("express");
 const app = express();
 const { v4: uuidv4 } = require('uuid');
 const cors = require("cors");
-const user = require("../models/User");
-const medicalHistory = require("../models/MedicalHistory");
+const patientInfo = require("../models/PatientInfo")
+
 const record = require("../models/Record");
 module.exports=appointmentInfo=(req,res)=>{
 const {name,email,phone,time,date,medicalhistory}=req.body;
 console.log(req.body);
-db.query(
-    "INSERT INTO user (ID,Name,Email) VALUES(?,?,?)",[uuidv4(),name,email],
+// db.query(
+    BEGIN;
+    "INSERT INTO patientInfo (Patient_ID,Name,Email,Phone,MedicalHistory) VALUES(?,?,?,?,?)",[uuidv4(),name,email,phone,medicalhistory],
     (err,result)=>{
         console.log(err);
         res.status(200).json({
         })
-    }
-);
-db.query(
-    "INSERT INTO medicalhistory (MedicalHistory) VALUES(?)",[medicalhistory],
+    },
+
+ "INSERT INTO record (Time,Date) VALUES(?,?)",[time,date],
     (err,result)=>{
         console.log(err);
         res.status(200).json({
 
         })
     }
-);
-db.query(
-    "INSERT INTO record (Time,Date) VALUES(?,?)",[time,date],
-    (err,result)=>{
-        console.log(err);
-        res.status(200).json({
+    COMMIT;
+    // );
 
-        })
-    }
-);
+
+
+// db.query(
+//     "INSERT INTO record (Time,Date) VALUES(?,?)",[time,date],
+//     (err,result)=>{
+//         console.log(err);
+//         res.status(200).json({
+
+//         })
+//     }
+// );
 
 
 }

@@ -29,6 +29,7 @@ const Signin = (props) => {
    if(res.status===200){
   
     localStorage.setItem('token', res.data.token);
+    console.log("login successfull");
     navigate('/doctorpage');
    }else{
     console.log("Error Occured");

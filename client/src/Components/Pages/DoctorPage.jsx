@@ -2,6 +2,7 @@ import react from "react";
 import Admin from "../Admin/Admin";
 import { useEffect } from "react";
 import { Route, Navigate, useNavigate } from "react-router-dom";
+import PatientPage from "./PatientPage";
 // import jwt from 'jsonwebtoken'
 import DoctorProfile from "../Profile/DoctorProfile/DoctorProfile";
 import styles from "./Styles.module.css"
