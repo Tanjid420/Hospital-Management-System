@@ -35,7 +35,7 @@ function App() {
       //fetch data from DB and store in user autharization and id
     let temp=userState;
     temp={
-      auth:"doctor",
+      auth:"admin",
       id:"12",
       img:"https://images.unsplash.com/photo-1501705388883-4ed8a543392c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     }
