@@ -1,6 +1,3 @@
-const Database = require("../config/CreateConnection");
-const DB = new Database();
-const db = DB.establishConnection();
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 const bodyParser = require("body-parser");
@@ -13,6 +10,7 @@ const user = require("../models/User");
 var jwt = require("jsonwebtoken");
 const JWT_secret = "fuckShantoHard";
 const { v4: uuidv4 } = require("uuid");
+const db=require("../config/CreateConnection")
 
 app.use(
   cors({
@@ -22,7 +20,8 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({extended:true,limit: '50mb'}));
 app.use(
   session({
     genid: function (req) {
@@ -39,13 +38,14 @@ app.use(
 
 module.exports = signin = async (req, res) => {
   const { email, password } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
 
   try {
     db.query(
-      "SELECT * FROM User WHERE email = ?",
+      "SELECT * FROM user WHERE email = ?",
       [email],
       async (error, results, fields) => {
+      console.log(results[0].Email)
         if (error) {
           console.log(error);
           res.send({
@@ -53,7 +53,13 @@ module.exports = signin = async (req, res) => {
             failed: "error ocurred",
           });
         } else {
-          console.log(results);
+          if(results[0].Status!=true)
+          {
+            
+            return res.status(204).json({error:"Not yet Approved"});
+          }
+
+          // console.log(results);
           if (results.length > 0) {
             console.log(results[0].Password);
             const comparision = await bcrypt.compare(
@@ -61,17 +67,19 @@ module.exports = signin = async (req, res) => {
               results[0].Password
             );
             if (comparision) {
-              console.log(req.session);
+              // console.log(req.session);
               // req.session.user = results;
               // console.log(req.session.user);
+              console.log(results)
               const data = {
+
                 results,
               };
               const token = jwt.sign({ data }, JWT_secret);
-              console.log(`this is jwt${token}`);
+              // console.log(`this is jwt${token}`);
               return res
                 .status(200)
-                .json({ success: "Login successful", token: token });
+                .json({ success: "Login successful",res:results[0],token:token});
             } else {
               res.status(204).json({error:"wrong email or password"})
                 

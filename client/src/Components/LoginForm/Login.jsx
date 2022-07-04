@@ -2,12 +2,12 @@ import React  from "react";
 import Box from "./SideBox/Box"
 import Form from "./Form/Form"
 import styles from "./Login.module.css"
-const Login=()=>{
+const Login=(props)=>{
    return(
         <div className={styles.loginWrapper}>
               <div className={styles.loginContainer}>
             <Box />
-            <Form />
+            <Form data={props.data}/>
             
     </div>
  

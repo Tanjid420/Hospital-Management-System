@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useContext } from "react";
 import Admin from "../Admin/Admin";
 import { useEffect } from "react";
 import { Route, Navigate, useNavigate } from "react-router-dom";
@@ -7,12 +7,14 @@ import PatientPage from "./PatientPage";
 import DoctorProfile from "../Profile/DoctorProfile/DoctorProfile";
 import styles from "./Styles.module.css"
 import NavbarLogin from "../NavbarLogin/NavbarLogin";
+import { UserContext } from "../../UserContext";
 const DoctorPage = () => {
+  const user=useContext(UserContext)
   const JWT_secret = "fuckShantoHard";
   const navigate = useNavigate();
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
+    
+    if (!user.token) {
       navigate("/doctor");
     } else {
       try {

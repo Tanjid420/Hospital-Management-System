@@ -1,22 +1,21 @@
 import Axios from "axios";
-import { useState,useEffect } from "react";
+import { useState,useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import doctor from "../../../../assets/doctor.jpg";
 import styles from "./Signin.module.css";
-import DoctorPage from "../../../Pages/DoctorPage";
 
 import {
   Route,
   Navigate,
   useNavigate
 } from 'react-router-dom';
-const Signin = (props) => {
+import { UserContext } from "../../../../UserContext";
+const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // const submitHandler=()=>
-  //     console.log("hello")
-  // }
+  const dataHandler=useContext(UserContext)
+ 
   Axios.defaults.withCredentials=true;
   const signin = async (e) => {
     e.preventDefault();
@@ -24,27 +23,32 @@ const Signin = (props) => {
       email: email,
       password: password,
     });
-    console.log(res);
-
+    console.log(res.data.res);
+    const data={
+      ...res.data.res,
+      token:res.data.token
+    }
    if(res.status===200){
+    
+    dataHandler(data)
+    localStorage.setItem("id",res.data.id)
+    localStorage.setItem("auth",res.data.role)
+    if(res.data.res.Role=="admin"){
+        navigate('/admin')
+    }
+    else if(res.data.res.Role=="doctor"){
+      navigate("/doctorpage")
+    }
+    else if(res.data.res.Role=="employee")
+    {
+      navigate("/employeepage")
+    }
   
-    localStorage.setItem('token', res.data.token);
-    console.log("login successfull");
-    navigate('/doctorpage');
    }else{
     console.log("Error Occured");
    }
   };
-  
-  
-
-  // useEffect(()=>{
-  //     // Axios.get("http://localhost:4000/signin").then((response)=>{
-  //     //     console.log(response);
-
-  //     // })
-
-  // },[])
+ 
   return (
     <div className={styles.signinContainer}>
       <div className={styles.imgContainer}>

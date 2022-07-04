@@ -10,7 +10,7 @@ const List=(props)=>{
                 {props.textToShow}
             </div>
             <div className={styles.listContainer}>
-                <table   border="0" cellspacing="0" cellpadding="0" className={styles.tableContainer}>
+                <table   border="0" cellSpacing="0" cellPadding="0" className={styles.tableContainer}>
                     <tr>
                        {props.header.map((el,id)=>{
                            return(
@@ -22,9 +22,9 @@ const List=(props)=>{
                         return(
                             <tr onClick={()=>props.clicked(el.id)} className={id%2?styles.row1:styles.row} key={id}>
                                 
-                              {Object.entries(el).map(el1=>{
+                              {Object.entries(el).map((el1,id)=>{
                                   return(
-                                      <td className={styles.listItem}>
+                                      <td key={id} className={styles.listItem}>
                                          {el1[0]==="medicalHistory"?<span><Link className={styles.link} to={path+"/patient"+"/"+el.id}>{el1[1]}</Link></span>:<span>{el1[1]}</span>}
                                         </td>
                                   )

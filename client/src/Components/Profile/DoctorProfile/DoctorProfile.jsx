@@ -8,15 +8,14 @@ import Shift from "../../Shift/Shift";
 import BuildingRoom from "../../BuildingRoom/BuildingRoom";
 import { UserContext } from "../../../UserContext";
 const DoctorProfile=(props)=>{
-    const use=useContext(UserContext);
-    let auther=use.auth;
+    const user=useContext(UserContext)
     const params=useParams();
     let id=params.id
-    useEffect(()=>{
-        // get request from database
-        console.log(id);
-    },[])
-    console.log(params.id)
+    // useEffect(()=>{
+    //     // get request from database
+    //     console.log(id);
+    // },[])
+    // console.log(params.id)
    
     const doctor=[
     {
@@ -34,7 +33,7 @@ const DoctorProfile=(props)=>{
         building:"ABC",
         room:"121"
     }
-    let auth="admin"
+    let auth=user.Role
     const header=[
         {name:"No."},
         {name:"Name"},
@@ -136,7 +135,7 @@ const DoctorProfile=(props)=>{
               
             </div> 
             {
-                auther=="admin"?<div  className={styles.list}><List list={list} header={header}/></div>:<div className={styles.list}><List list={list1} header={header1}/></div>
+                auth=="admin"?<div  className={styles.list}><List list={list} header={header}/></div>:<div className={styles.list}><List list={list1} header={header1}/></div>
             }
             
         </div>

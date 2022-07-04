@@ -1,12 +1,29 @@
-import React, { useContext } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { UserContext } from "../../UserContext";
 import styles from "./NavbarLogin.module.css"
-const NavbarLogin=()=>{
+import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+const NavbarLogin=(props)=>{
     const user=useContext(UserContext)
+    console.log(user.Image)
     const location=useLocation();
     let path=location.pathname
-    console.log(user.img)
+    const navigate=useNavigate()
+    // console.log(user.img)
+    // const token=localStorage.getItem("token")
+    
+    useEffect(()=>{
+if(!user.token)
+    {
+        navigate("/doctor")
+    }
+    },[])
+    const cld=new Cloudinary({
+        cloud:{
+          cloudName:"dkacz3eix"
+        }
+      })
     return(
         <nav className={styles.container}>
             <div className={styles.innerContainer}>
@@ -17,7 +34,8 @@ const NavbarLogin=()=>{
             <Link className={styles.link} to={path+"/"+"profile"} >Profile</Link>   
             </div>
             <div className={styles.profileContainer}>
-                <img className={styles.img} src={user.img}/>
+                {/* <AdvancedImage cldImg={cld.image(props.)} */}
+                <img className={styles.img} src={user.Image}/>
             </div>
           
             </div>

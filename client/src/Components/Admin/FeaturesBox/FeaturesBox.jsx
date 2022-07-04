@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styles from "./FeaturesBox.module.css"
 import LabelContainer from "../../LabelContaier/LabelContainer";
 import dashboardImg from "../../../assets/dashboard.png"
@@ -9,10 +9,9 @@ import logoutImg from "../../../assets/logout.png"
 import profileImg from "../../../assets/profile.png"
 import testImg from "../../../assets/test.png"
 import patientImg from "../../../assets/patient1.png"
-import { useLocation } from "react-router-dom";
-import { UserContext } from "../../../UserContext";
+import { useLocation, useNavigate } from "react-router-dom";
+
 const FeaturesBox=(props)=>{
-    const user=useContext(UserContext)
     const information=[{
         img:dashboardImg,
         name:"Dashboard",
@@ -61,12 +60,15 @@ const FeaturesBox=(props)=>{
 
     const location=useLocation();
     let path=""
-    if(location.pathname=="/")
+   console.log(location.pathname)
+    if(location.pathname=="/admin")
     {
-        path="dashboard"
+        path="admin/dashboard"
     }
     else{
-            path=location.pathname.split('/')[1];
+            path=path+location.pathname.split('/')[2];
+            
+            console.log(path)
     }
    
     // console.log( `its the path ${path}`)
@@ -74,7 +76,9 @@ const FeaturesBox=(props)=>{
         activeObject:path
     })
     const clickEventHandler=(id)=>{
+        console.log(id)
       let newAppstate=id;
+        
       setAppState({
           activeObject:newAppstate
       })
