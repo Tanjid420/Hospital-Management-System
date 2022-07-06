@@ -3,7 +3,7 @@ import styles from "./Form.module.css"
 import SignupContainer from "./SignupContainer/SignupContainer";
 import Signin from "./Signin/Signin";
 import Signup from "./Signup/Signup";
-const Form=()=>{
+const Form=(props)=>{
     let [status,setStatus]=useState(0)
     const onClickHandler=(onClickStatus)=>{
         if(onClickStatus==="signin")
@@ -19,7 +19,7 @@ const Form=()=>{
     return(
         <div className={styles.sideForm}>
             <SignupContainer clicked={onClickHandler}/>
-           {status?<Signup/>:<Signin />}
+           {status?<Signup/>:<Signin data={props.data} />}
         </div>
     )
 }

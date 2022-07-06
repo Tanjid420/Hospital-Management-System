@@ -53,3 +53,20 @@
     }
     
 }
+.link{
+    text-decoration: none;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    text-decoration: none;
+    font-family:  "Roboto","Helvetica","Arial",sans-serif;
+    font-size:1.2rem;
+    letter-spacing: 0.00735em;
+    color: #344767;
+    font-weight: 700;
+    background-color: transparent;
+
+}
+.link:hover{
+    color: rgb(83, 138, 0);
+}

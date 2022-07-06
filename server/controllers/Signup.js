@@ -1,34 +1,67 @@
-const Database=require("../config/CreateConnection")
-const DB=new Database();
-const db=DB.establishConnection();
+const db=require("../config/CreateConnection")
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
-
+const express=require("express")
+<<<<<<< HEAD
+// const cloudinary=require("../util/Cloudinary")
+=======
+const cloudinary=require("../util/Cloudinary")
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
 const user = require("../models/User");
 var jwt = require('jsonwebtoken');
+const { application } = require("express");
 const JWT_secret = 'fuckShantoHard';
+module.exports=signup=async(req,res)=>{
+    const {username, password, email, confirmPassword, sex, file,role,image} = req.body
+<<<<<<< HEAD
+    // const uploadedImage=await cloudinary.uploader.upload(file,{
+    //   upload_preset:"my_upload",
+    //   allowed_formats:["pdf","jpg","jpeg","png"]
+    // },(err,result)=>{
+    //   if(err)
+    //   throw err
+    //   // console.log(result)
+    // })
+=======
+    const uploadedImage=await cloudinary.uploader.upload(file,{
+      upload_preset:"my_upload",
+      allowed_formats:["pdf","jpg","jpeg","png"]
+    },(err,result)=>{
+      if(err)
+      throw err
+      // console.log(result)
+    })
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
+    try{
+      // res.status(200).json(uploadedImage)
 
-
-
-
-
-module.exports=signup=(req,res)=>{
-    const {username, password, email, confirmPassword, sex, image} = req.body
-    console.log(req.body)
-    bcrypt.hash(password,saltRounds,(err,hash)=>{
-      if(err){
-        console.log(err);
-      }
+    }
+    catch(err){
+      console.log(err)
+    }
+    // console.log(uploadedImage)
+    // console.log(image)
+   const hash= await bcrypt.hash(password,saltRounds)
+   const hash1=await bcrypt.hash(confirmPassword,saltRounds)
+   if(hash!=hash1)
+   {
+    res.status(204).json({error:"password do not match"})
+   }
+    // console.log(hash)
+    const bool=false
+  
+    
       db.query(
-        "INSERT INTO user (ID,Name,Email,Password,Sex) VALUES(?,?,?,?,?)",
-        [ uuidv4(),username, email, hash, sex],
+        "INSERT INTO user (ID,Name,Email,Password,Sex,File,Role,Status,Image) VALUES(?,?,?,?,?,?,?,?,?)",
+        [ uuidv4(),username, email, hash, sex,uploadedImage.public_id,role,bool,image],
         (err, result) => {
           console.log(err);
-          res.status(200).json({
+          // res.status(200).json({
     
-        })
+        // })
         }
+
       );
       const data = {
         user:{
@@ -37,8 +70,11 @@ module.exports=signup=(req,res)=>{
       }
       const authToken = jwt.sign({ data }, 'JWT_secret');
       console.log(`This is jwt ${authToken}`);
-    })
-  
+      // res.redirect("/")
 
+
+// res.redirect("/doctorpage")
 
 }
+
+

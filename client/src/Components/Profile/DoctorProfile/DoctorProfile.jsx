@@ -1,18 +1,21 @@
-import React, { useEffect } from "react";
-import { useLinkClickHandler, useParams } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, useLinkClickHandler, useLocation, useParams } from "react-router-dom";
 import styles from "./DoctorProfile.module.css"
 import LineChart from "../../Chart/LineChart/Linechart/LineChart";
 import List from "../../List/List";
 import ProfileImage from "../../ProfileImage/ProfileImage";
 import Shift from "../../Shift/Shift";
+import BuildingRoom from "../../BuildingRoom/BuildingRoom";
+import { UserContext } from "../../../UserContext";
 const DoctorProfile=(props)=>{
+    const user=useContext(UserContext)
     const params=useParams();
     let id=params.id
-    useEffect(()=>{
-        // get request from database
-        console.log(id);
-    },[])
-    console.log(params.id)
+    // useEffect(()=>{
+    //     // get request from database
+    //     console.log(id);
+    // },[])
+    // console.log(params.id)
    
     const doctor=[
     {
@@ -26,7 +29,11 @@ const DoctorProfile=(props)=>{
         from:"12:20",
         to:"05:00"
     }
-    let auth="admin"
+    const buildingRoom={
+        building:"ABC",
+        room:"121"
+    }
+    let auth=user.Role
     const header=[
         {name:"No."},
         {name:"Name"},
@@ -72,6 +79,48 @@ const DoctorProfile=(props)=>{
         }
 
     ]
+    const header1=[
+        {name:"No."},
+        {name:"Name"},
+        {name:"Date"},
+        {name:"Time"},
+        {name:"Medical History"},
+        {name:"Payment"},
+        {name:"Status"}
+    ]
+    const location=useLocation();
+    let path=location.pathname
+    let ID=1
+    
+    const list1=[
+        {
+            id:7,
+            name:"Shanto",
+            date:"4/4/22",
+            time:"5.20PM",
+            medicalHistory:"History",
+            payment:"$100",
+            status:"Paid"
+        },
+        {
+            id:5,
+            name:"Shanto",
+            date:"4/4/22",
+            time:"5.20PM",
+            medicalHistory:"History",
+            payment:"$100",
+            status:"Paid"
+        },
+        {
+            id:9,
+            name:"Shanto",
+            date:"4/4/22",
+            time:"5.20PM",
+            medicalHistory:"History",
+            payment:"$100",
+            status:"Paid"
+        }
+    ]
     return(
         <div className={styles.container}>
           <ProfileImage person={doctor}/>
@@ -79,11 +128,16 @@ const DoctorProfile=(props)=>{
                 <div className={styles.chart}>
                     <LineChart label={"Patient"}/>
                 </div>
-                <Shift shift={shift} id={id}/>
+                <div className={styles.timeContainer}> 
+                      <Shift shift={shift} id={id}/>
+                <BuildingRoom buildingRoom={buildingRoom} id={id}/>
+                </div>
+              
             </div> 
-            <div  className={styles.list}>
-                <List list={list} header={header}/>
-            </div>
+            {
+                auth=="admin"?<div  className={styles.list}><List list={list} header={header}/></div>:<div className={styles.list}><List list={list1} header={header1}/></div>
+            }
+            
         </div>
     )
 }
