@@ -101,6 +101,9 @@ function App() {
           <Route path="/strokecenter" exact element={<StrokeCenter/>}/>
           <Route path="/vaccination" exact element={<Vaccination/>}/>
           
+          <Route path="/doctorpage" exact element={<Wraper ><DoctorPage/></Wraper>} />
+          <Route path="/employeepage" exact element={<Wraper><EmployeePage/></Wraper>} />
+          <Route path="/logout" exact element={<LoginPage/>}/>
         </Routes>
         </UserContext.Provider>
         {/* <Footer /> */}

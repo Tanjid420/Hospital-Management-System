@@ -10,9 +10,13 @@ import ModalConsultantForm from '../Layout/ModalConsultantForm';
 import ShortProfiles from "../ShortProfiles/ShortProfiles"
 import DescriptionBoxes from "../DescriptionBoxes/descriptionBoxes"
 import Slider from '../../UI Components/Slider/Slider'
+<<<<<<< HEAD
 import Footer from "../Footer/Footer";
 
 import Navbar2 from '../Navbar/Navbar2';
+=======
+import Navbar from '../Navbar/Navbar';
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
 
 
 const PatientPage = ()=> {
@@ -25,8 +29,12 @@ const PatientPage = ()=> {
 
     return (
         <react.Fragment>
+<<<<<<< HEAD
          {/* <Navbar/> */}
          <Navbar2/>
+=======
+         <Navbar/>
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
           <main>
           
           <Slider/>

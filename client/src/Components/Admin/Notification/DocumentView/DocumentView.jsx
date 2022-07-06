@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 // import {AdvancedImage} from '@cloudinary/react';
 // import {Cloudinary} from "@cloudinary/url-gen";
+=======
+import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { GET } from "../../../../api/api"; 
 import { POST } from "../../../../api/api";
@@ -31,20 +36,36 @@ const approveHandler=async(id)=>{
   const result=await POST("/approve/approve",{id:id})
   navigate("/admin/notification")
 }
+<<<<<<< HEAD
     // const cld=new Cloudinary({
     //     cloud:{
     //       cloudName:"dkacz3eix"
     //     }
     //   })
+=======
+    const cld=new Cloudinary({
+        cloud:{
+          cloudName:"dkacz3eix"
+        }
+      })
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
       
     return(
         <div className={styles.container}>
           <div className={styles.infoContainer}>
+<<<<<<< HEAD
             {/* {user.map((el,id)=>{
               return (
                 // <AdvancedImage key={id} className={styles.image} cldImg={cld.image(el.File)}/>
               )
               })} */}
+=======
+            {user.map((el,id)=>{
+              return (
+                <AdvancedImage key={id} className={styles.image} cldImg={cld.image(el.File)}/>
+              )
+              })}
+>>>>>>> 0d905a6d38e4ff3d0091bbd0d1c57080e46e5690
              
              {/* <img className={styles.image} src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"/> */}
              <div className={styles.approval}>
