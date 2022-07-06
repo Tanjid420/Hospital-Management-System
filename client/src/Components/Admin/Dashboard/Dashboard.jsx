@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styles from "./Dashboard.module.css"
 import InformationBox from "./InformationBox/InformatioBox";
 import paitent from "../../../assets/patient.png"
@@ -9,7 +9,24 @@ import LineChart from "../../Chart/LineChart/Linechart/LineChart";
 import ChartContainer from "../../ChartContainer/ChartContainer";
 import List from "../../List/List";
 import PieChart from "../../Chart/LineChart/PieChart/PieChart";
+import { useLocation, useNavigate } from "react-router-dom";
+import { UserContext } from "../../../UserContext";
+import { GET } from "../../../api/api";
 const Dashboard=()=>{
+  const user=useContext(UserContext)
+  const navigate=useNavigate()
+  let [dashboard,setDashboard]=useState([])
+//   if(user.Role!="admin")
+//   {
+//      navigate("/doctor")
+//   }
+const getData=async()=>{
+   const result=await GET("/dashboardData")
+   setDashboard(result.data)
+}
+useEffect(()=>{
+   getData();
+},[])
    const xx={name:"shanto"}
      const DashboardInfo=[{
         info:"New Patient",
@@ -157,7 +174,7 @@ const clickHandler=(id)=>{
         <div className={styles.dashboardContainer}>
             {DashboardInfo.map((el,id)=>{
                 return(
-                     <InformationBox  key={id} info={el.info} img={el.img}/>
+                     <InformationBox  key={id} percentage={"%55"} percentageInfo={"%55"} info={el.info} img={el.img}/>
                 )
                 
             })}

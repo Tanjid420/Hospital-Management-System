@@ -1,4 +1,4 @@
-const patientInfo=`CREATE TABLE PatientInfo(
+const patientInfo=`CREATE TABLE patientInfo(
     Patient_ID VARCHAR(200) PRIMARY KEY UNIQUE,
     Name VARCHAR(20) NOT NULL,
     Email VARCHAR(20) NOT NULL UNIQUE,

@@ -1,12 +1,12 @@
 const Database = require("../config/CreateConnection");
-const DB = new Database();
-const db = DB.establishConnection();
+// const DB = new Database();
+// const db = DB.establishConnection();
 const express = require("express");
 const app = express();
 const { v4: uuidv4 } = require('uuid');
 const cors = require("cors");
 const patientInfo = require("../models/PatientInfo")
-
+const db=require("../config/CreateConnection")
 const record = require("../models/Record");
 module.exports=appointmentInfo=(req,res)=>{
 const {name,email,phone,time,date,medicalhistory}=req.body;

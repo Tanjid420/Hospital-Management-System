@@ -1,4 +1,4 @@
-const buildingInfo=`CREATE TABLE BuildingInfo (
+const buildingInfo=`CREATE TABLE buildingInfo (
     BuildingID VARCHAR(200) UNIQUE,
     Type VARCHAR(30),
     Availability INTEGER,
