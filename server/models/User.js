@@ -1,10 +1,11 @@
-const user=`CREATE TABLE User (
+const user=`CREATE TABLE user (
     ID  VARCHAR(200) PRIMARY KEY UNIQUE,
-    Name VARCHAR(20) NOT NULL,
-    Email VARCHAR(30) NOT NULL UNIQUE ,
+    Name VARCHAR(30) NOT NULL,
+    Email VARCHAR(50) NOT NULL UNIQUE ,
     Password VARCHAR(500) NOT NULL,
     Sex VARCHAR(10) NOT NULL,
-    Image VARCHAR(200),
+    File VARCHAR(300),
     Role VARCHAR(200),
-    Status BOOLEAN)`
+    Status BOOLEAN,
+    Image VARCHAR(300))`
 module.exports=user;

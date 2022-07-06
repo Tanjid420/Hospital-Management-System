@@ -10,18 +10,18 @@ const InformationBox=(props)=>{
             </div>
             <div className={styles.textContainer}>
                <div>{props.info}</div>
-               <h4>222</h4>
+               <h4>{props.count}</h4>
             </div>
             </div>
             <hr/>
             <div className={styles.statContainer}>
                 <div className={styles.percentage}>
                     {props.percentage}
-                    +55%  
+                    {/* +55%   */}
                 </div>
                 <div className={styles.percentageInfo}>
-                    {props.percentageInfo}
-                    Than last Week
+                    {/* {props.percentageInfo} */}
+                    {props.percentageInfo!=null?"Than last Week":null}
                 </div>
             </div>
         </div>

@@ -10,6 +10,9 @@ import ModalConsultantForm from '../Layout/ModalConsultantForm';
 import ShortProfiles from "../ShortProfiles/ShortProfiles"
 import DescriptionBoxes from "../DescriptionBoxes/descriptionBoxes"
 import Slider from '../../UI Components/Slider/Slider'
+import Footer from "../Footer/Footer";
+
+import Navbar2 from '../Navbar/Navbar2';
 
 
 const PatientPage = ()=> {
@@ -22,7 +25,8 @@ const PatientPage = ()=> {
 
     return (
         <react.Fragment>
-         
+         {/* <Navbar/> */}
+         <Navbar2/>
           <main>
           
           <Slider/>
@@ -39,6 +43,7 @@ const PatientPage = ()=> {
           {openModalExp && <ModalExp setOpenModalExp = {setOpenModalExp}/>}
           <DescriptionBoxes/>
           </main>
+          <Footer/>
 
           
     </react.Fragment>

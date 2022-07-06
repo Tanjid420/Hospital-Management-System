@@ -1,4 +1,4 @@
-const record=`CREATE TABLE Record (
+const record=`CREATE TABLE record (
     Record_ID VARCHAR(200) PRIMARY KEY UNIQUE,
     Time VARCHAR(20),
     Date DATE,
@@ -6,6 +6,6 @@ const record=`CREATE TABLE Record (
     PaitentId_fk VARCHAR(200),
     PtientPhone VARCHAR(11),
     DoctorId_fk VARCHAR(200),
-    FOREIGN KEY(PaitentId_fk) REFERENCES User(ID),
-    FOREIGN KEY(DoctorId_fk) REFERENCES User(ID))`
+    FOREIGN KEY(PaitentId_fk) REFERENCES user(ID),
+    FOREIGN KEY(DoctorId_fk) REFERENCES user(ID))`
     module.exports=record;
