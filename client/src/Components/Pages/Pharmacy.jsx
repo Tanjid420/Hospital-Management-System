@@ -1,9 +1,10 @@
 import react from "react";
-import Navbar2 from "../Navbar/Navbar2";
-import Footer from "../Footer/Footer";
-import CaseQuestionExp from "../Case_Question_Exp";
 import Slider from "../../UI Components/Slider/Slider";
+import CaseQuestionExp from "../Case_Question_Exp";
+import Footer from "../Footer/Footer";
+import Navbar2 from "../Navbar/Navbar2";
 import styles from "./BloodBank.module.css";
+import DoctorListByDept from "./DoctorListByDept";
 const Pharmacy = () => {
   return (
     <react.Fragment>
@@ -31,6 +32,7 @@ const Pharmacy = () => {
         </div>
         <CaseQuestionExp />
       </main>
+      <DoctorListByDept />
       <Footer />
     </react.Fragment>
   );

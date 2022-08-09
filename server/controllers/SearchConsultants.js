@@ -7,7 +7,7 @@ const cors = require("cors");
 const mysql=require("mysql")
 
 const user = require("../models/User");
-const dept = require("../models/Department");
+const dept = require("../models/Dept");
 const degrees = require("../models/Degrees");
 
 module.exports = searchConsultant = (req, res) => {
@@ -17,17 +17,22 @@ module.exports = searchConsultant = (req, res) => {
   // const where = +mysql.escape(dept);
   
   const sql =
-    `SELECT user.Name,dept.Name,degrees.Degree_Name FROM user
-    CROSS JOIN dept
-    CROSS JOIN degrees
+    `SELECT dept.Name,user.Name,degrees.Degree_Name 
+    FROM dept
+    INNER JOIN user
+    ON user.ID=dept.ID_fk
+    INNER JOIN degrees
+    ON degrees.ID_fk=dept.ID_fk
     WHERE dept.Name=`+mysql.escape(dept);
+    
    
   db.query(sql, (err, result) => {
     if (err) {
       console.log(err);
     }
     console.log(result);
+    res.send(result);
   });
-  res.status(200).json({ message: "successful" });
+ 
   
 };

@@ -60,12 +60,7 @@ const FeaturesBox=(props)=>{
 
     const location=useLocation();
     let path=""
-<<<<<<< HEAD
     if(location.pathname==="/")
-=======
-   console.log(location.pathname)
-    if(location.pathname=="/admin")
->>>>>>> main
     {
         path="admin/dashboard"
     }

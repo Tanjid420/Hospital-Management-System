@@ -18,6 +18,7 @@
     text-decoration: none;
     color: white;
     margin-right: 1rem;
+    background: none;
 }
 .div2 h3{
    margin-left: 1rem;
@@ -36,5 +37,4 @@
     color: white;
     padding-bottom: .25rem;
     border-bottom: 4px solid white;
-    background: none;
 }

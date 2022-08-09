@@ -7,7 +7,7 @@ import react, { useState } from "react";
 import reactDOM from "react-dom";
 import styles from "./ModalConsultantForm.module.css";
 
-const Backdrop = ({ setOpenModalConsultant }) => {
+const Backdrop = ({ setOpenModalConsultant , setSearch}) => {
   return (
     <div
       className={styles.backdrop}

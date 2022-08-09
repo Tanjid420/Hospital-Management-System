@@ -29,6 +29,15 @@ db.query(
 //     }
   
     );
+    // db.query(
+    //     "INSERT INTO dept (ID_fk,Name) VALUES(?,?)",['baal','saal'],
+    // (err,result)=>{
+    //     console.log(err);
+    //     res.status(200).json({
+
+    //     })
+    // }
+    // );
 
 
 
