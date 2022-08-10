@@ -9,7 +9,7 @@ const mysql=require("mysql")
 
     module.exports=availableseats=(req,res)=>{
         const condition='Yes';
-        const sql=`SELECT availableseats.BuildingName,availableseats.RoomNo,availableseats.BedNo,availableseats.Price
+        const sql=`SELECT availableseats.BuildingName,availableseats.RoomNo,availableseats.BedNo,availableseats.Price,availableseats.BedId 
         FROM availableseats
         WHERE Availability=`+mysql.escape(condition);
         db.query(sql, (err, result) => {

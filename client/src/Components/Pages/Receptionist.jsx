@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 import styles from './Receptionist1.module.css'
 import beds from '../../ReceptionistImage/Beds.jpg'
 import invoice from "../../ReceptionistImage/Receptionist Invoice.jpg"
+import occupied from "../../ReceptionistImage/ReservedBeds.jpg"
 import axios from 'axios';
 
 
@@ -32,6 +33,12 @@ const Receptionist = ()=>{
           <h2 className={styles.h2}>Available Beds</h2>
         </div>
       </div>
+      <Link to="/occupiedbeds">
+        <div className={styles.container2}>
+          <img className={styles.image} alt="s" src={occupied} />
+        </div>
+      </Link>
+      <h2 className={styles.h2}>Occupied Beds</h2>
             </main>
             <Footer/>
             

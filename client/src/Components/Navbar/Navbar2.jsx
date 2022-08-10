@@ -18,40 +18,40 @@ const Navbar2 = () => {
         <div className="div2"><h3>Hospital</h3></div>
         <div className="div3"><NavLink to="/">Home</NavLink>
         <NavLink  to="/aboutus">About Us</NavLink>
-        <a href='#'  onMouseEnter={showDropDown}
+        <a href='#' className="links" onMouseEnter={showDropDown}
                   onMouseLeave={hideDropDown} >Services {dropdown ?(<ul className="dropdown_list">
                     <NavLink to="services/bloodbank">
-                      <li>Blood Bank</li>
+                      <li className='lists'>Blood Bank</li>
                     </NavLink>
                     <NavLink to="/chemotherapy">
-                      <li>Chemo Therapy</li>
+                      <li className='lists'>Chemo Therapy</li>
                     </NavLink>
                     <NavLink to="/counseling">
-                      <li>Counseling</li>
+                      <li className='lists'>Counseling</li>
                     </NavLink>
                     <NavLink to="/diabetescenter">
-                      <li>Diabetis Center</li>
+                      <li className='lists'>Diabetis Center</li>
                     </NavLink>
                     <NavLink to="/emergency">
-                      <li>Emergency</li>
+                      <li className='lists'>Emergency</li>
                     </NavLink>
                     <NavLink to="/pharmacy">
-                      <li>Pharmacy</li>
+                      <li className='lists'>Pharmacy</li>
                     </NavLink>
                     <NavLink to="/physiotherapy">
-                      <li>Physiotherapy</li>
+                      <li className='lists'>Physiotherapy</li>
                     </NavLink>
                     <NavLink to="/prayerroom">
-                      <li>Prayer Room</li>
+                      <li className='lists'>Prayer Room</li>
                     </NavLink>
                     <NavLink to="/roomcategory">
-                      <li>Room Catrgory</li>
+                      <li className='lists'>Room Catrgory</li>
                     </NavLink>
                     <NavLink to="/strokecenter">
-                      <li>Stroke Center</li>
+                      <li className='lists'>Stroke Center</li>
                     </NavLink>
                     <NavLink to="/vaccination">
-                      <li>Vaccination</li>
+                      <li className='lists'>Vaccination</li>
                     </NavLink>
                   </ul>):null}</a>
         <NavLink to="/contact">Contact</NavLink></div>

@@ -8,6 +8,7 @@ import { useState } from "react";
 import Admin from "./Components/Admin/Admin";
 import Dashboard from "./Components/Admin/Dashboard/Dashboard";
 import Doctor from "./Components/Admin/Doctor/Doctor";
+
 import Employee from "./Components/Admin/Employee/Employee";
 import FeaturesBox from "./Components/Admin/FeaturesBox/FeaturesBox";
 import DocumentView from "./Components/Admin/Notification/DocumentView/DocumentView";
@@ -42,6 +43,7 @@ import { UserContext } from "./UserContext";
 import ReceptionistInvoice from "./Components/Pages/ReceptionistInvoice";
 import Receptionist from "./Components/Pages/Receptionist";
 import AvailableBeds from "./Components/Pages/AvailableBeds";
+import OccupiedBeds from "./Components/Pages/OccupiedBeds";
 function App() {
   // const token=localStorage.getItem("token")
   // console.log(token)
@@ -63,7 +65,8 @@ function App() {
         <Routes>
           <Route path="/" exact element={<LandingPage/>}/>
           <Route path="/receptionist/invoice" exect element={<ReceptionistInvoice/>}/>
-          <Route path='/availablebeds' exact element={<AvailableBeds/>}/>
+          <Route path='/occupiedbeds' exact element={<OccupiedBeds/>}/>
+           <Route path='/availablebeds' exact element={<AvailableBeds/>}/>
           <Route path="/patient" exact element={<PatientPage />} />
           <Route path="/doctor" exact element={<LoginPage data={dataHandler}/>} />
           <Route path="/receptionist" exact element={<Receptionist/>}/>

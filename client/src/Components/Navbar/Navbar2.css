@@ -19,6 +19,20 @@
     color: white;
     margin-right: 1rem;
     background: none;
+    font-weight: bold;
+}
+.div3 a:hover{
+    color: #caf0f8;
+    text-shadow: white;
+    font-weight: bolder;
+   
+    
+}
+ .lists:hover{
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    color:white;
+    transition: 0.1s;
 }
 .div2 h3{
    margin-left: 1rem;
@@ -26,15 +40,20 @@
 }
 .dropdown_list{
     position: absolute;
-    top: 5%;
-    right: 5%;
-    background-color: aquamarine;
+    top: 5.5%;
+    right: 2.8%;
+    background-color: #184e77;
     /* display: flex;
     flex-direction: column; */
     z-index: 100;
+    list-style: none;
+    padding-right: 2rem;
 }
 .active{
     color: white;
     padding-bottom: .25rem;
-    border-bottom: 4px solid white;
+    border-bottom: 2px solid white;
+}
+.links{
+    
 }

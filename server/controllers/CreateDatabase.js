@@ -50,7 +50,7 @@ module.exports=createDatabase=async(req,res)=>{
     db.query(AvailableSeats,(err,result)=>{
         if(err)
         throw err;
-        console.log("AavailableSeats created")
+        console.log("AvailableSeats created")
     })
     // db.query(Buildings,(err,result)=>{
     //     if(err)

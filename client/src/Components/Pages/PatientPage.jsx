@@ -30,8 +30,8 @@ const PatientPage = ()=> {
          {/* <Navbar/> */}
          <Navbar2/>
           <main>
-          <Receptionist/>
-          {/* <Slider/>
+          
+          <Slider/>
           
           <PatientInfoQuery setOpenModalAppointment={setOpenModalAppointment} setOpenModalQuery={setOpenModalQuery} setOpenModalConsultant={setOpenModalConsultant}/>
           
@@ -43,7 +43,7 @@ const PatientPage = ()=> {
           <CaseQuestionExp setOpenModalQuestion={setOpenModalQuestion} setOpenModalExp={setOpenModalExp}/>
           {openModalQuestion && <ModalQuestion setOpenModalQuestion={setOpenModalQuestion}/>}
           {openModalExp && <ModalExp setOpenModalExp = {setOpenModalExp}/>}
-          <DescriptionBoxes/> */}
+          <DescriptionBoxes/>
           </main>
           
           {/* <Footer/> */}
